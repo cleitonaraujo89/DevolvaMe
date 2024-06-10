@@ -1,22 +1,46 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-img src="assets/devolvame.png"></ion-img>
+    <ion-img id="logo" src="assets/logo.png"></ion-img>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
+  <ion-img id="fraseImg" src="assets/imagens/frase.png"></ion-img>
+  <ion-card id="cardMissao">
+    <ion-card-header>
+      <ion-card-title>O que é o Devolva-me?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Devolva-me tem como objetivo auxiliar a devolução de itens perdidos aos seus respectivos donos de um modo simples, facilitando o contato entre quem encotrou e quem perdeu</p>
+    </ion-card-content>
+  </ion-card>
 
-  <div id="container">
-    <h1>Olá, seja bem-vindo(a) à versão teste de nosso aplicativo!</h1>
-    <br>
-    <p>Paticipantes da iniciativa Devolva-me:</p>
-    <br>
-    <p>Bruno Cesar</p>
-    <p>Cleiton Araujo</p>
-    <p>Evellyn Mendes</p>
-  </div>
+  <ion-card id="cardComoFunciona">
+    <ion-card-header>
+      <ion-card-title>Como Funciona!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Cadastro Simples: Ao se cadastrar em nosso app, você receberá um QR Code exclusivo.</p>
+      <p>Página Pessoal: Esse QR Code direciona para uma página personalizada, onde o visitante encontrará os meios de contato que você escolher (telefone, WhatsApp, redes sociais ou e-mail).</p>
+      <p>Fácil de Usar: Coloque o seu QR Code onde achar mais importante — seja em etiquetas de bagagem, coleiras de pets, chaves, celulares, etc.</p>
+
+      <ion-card-title>Vantagens:</ion-card-title>
+     
+    </ion-card-content>
+    
+  </ion-card>
+  <ion-list>
+    <ion-item>Praticidade: Uma única página com todas as suas informações de contato.</ion-item>
+
+    <ion-item>Segurança: Você escolhe como quer ser contatado, mantendo o controle sobre suas informações.</ion-item>
+
+    <ion-item>Eficiência: Aumenta as chances de recuperação rápida de seus objetos ou pets perdidos.</ion-item>
+  </ion-list>
+  
+
+
 </ion-content>
