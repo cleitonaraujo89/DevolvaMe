@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
+#divHeaderBotoes{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+#logo{
+  width: 100px;
+  margin-left: 15px;
+}
+
+.buttonHeader{
+  --background: #612a85;
+  margin-top: 20px;
+  margin-right: 5px;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+#divButton{
+    width: 100%;
+    text-align: center;
+  }
+  
+  #buttonCadastro{
+    --background: #612A85;
+  }
+  
+  #pFooter{
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-style: italic;
+   }
+  

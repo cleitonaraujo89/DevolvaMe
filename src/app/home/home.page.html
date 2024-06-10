@@ -1,11 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar id="tollbarHeader">
     <div id="divHeaderBotoes">
-      <ion-img id="logo" src="assets/logo.png"></ion-img>
+      <ion-img id="logo" src="assets/logo.png" routerLink="/home"></ion-img>
       <div>
-        <ion-button class="buttonHeader" size="small"> Login &nbsp;
+        <ion-button class="buttonHeader" size="small" routerLink="/login">Login &nbsp;
           <ion-icon name="log-in-outline"></ion-icon></ion-button>
-        <ion-button class="buttonHeader" size="small">Cadastro &nbsp;<ion-icon name="person-outline"></ion-icon></ion-button>
+        <ion-button class="buttonHeader" size="small" routerLink="/cadastro">Cadastro &nbsp;<ion-icon name="person-outline"></ion-icon></ion-button>
       </div>
     </div>
   </ion-toolbar>
@@ -43,7 +43,7 @@
   <p class="pComDestaque">Experimente agora!</p>
 
   <div id="divButton">
-    <ion-button id="buttonCadastro" >Cadastre-se!</ion-button>
+    <ion-button id="buttonCadastro" routerLink="/cadastro">Cadastre-se!</ion-button>
   </div>
 
   <ion-footer>
