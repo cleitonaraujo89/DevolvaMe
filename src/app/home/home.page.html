@@ -1,6 +1,13 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-img id="logo" src="assets/logo.png"></ion-img>
+  <ion-toolbar id="tollbarHeader">
+    <div id="divHeaderBotoes">
+      <ion-img id="logo" src="assets/logo.png"></ion-img>
+      <div>
+        <ion-button class="buttonHeader" size="small"> Login &nbsp;
+          <ion-icon name="log-in-outline"></ion-icon></ion-button>
+        <ion-button class="buttonHeader" size="small">Cadastro &nbsp;<ion-icon name="person-outline"></ion-icon></ion-button>
+      </div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -9,38 +16,39 @@
     <ion-toolbar>
     </ion-toolbar>
   </ion-header> -->
-  <ion-img id="fraseImg" src="assets/imagens/frase.png"></ion-img>
-  <ion-card id="cardMissao">
-    <ion-card-header>
-      <ion-card-title>O que é o Devolva-me?</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>Devolva-me tem como objetivo auxiliar a devolução de itens perdidos aos seus respectivos donos de um modo simples, facilitando o contato entre quem encotrou e quem perdeu</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card id="cardComoFunciona">
-    <ion-card-header>
-      <ion-card-title>Como Funciona!</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>Cadastro Simples: Ao se cadastrar em nosso app, você receberá um QR Code exclusivo.</p>
-      <p>Página Pessoal: Esse QR Code direciona para uma página personalizada, onde o visitante encontrará os meios de contato que você escolher (telefone, WhatsApp, redes sociais ou e-mail).</p>
-      <p>Fácil de Usar: Coloque o seu QR Code onde achar mais importante — seja em etiquetas de bagagem, coleiras de pets, chaves, celulares, etc.</p>
-
-      <ion-card-title>Vantagens:</ion-card-title>
-     
-    </ion-card-content>
-    
-  </ion-card>
-  <ion-list>
-    <ion-item>Praticidade: Uma única página com todas as suas informações de contato.</ion-item>
-
-    <ion-item>Segurança: Você escolhe como quer ser contatado, mantendo o controle sobre suas informações.</ion-item>
-
-    <ion-item>Eficiência: Aumenta as chances de recuperação rápida de seus objetos ou pets perdidos.</ion-item>
-  </ion-list>
+  <ion-img id="imgInicio" src="assets/imagens/devolva_me.png"></ion-img>
   
+  <ion-title class="titulos">O que é o Devolva-me?</ion-title>
+    
+  <p class="textos">Devolva-me tem como objetivo auxiliar a devolução de itens perdidos aos seus respectivos donos de um modo simples, facilitando o contato entre quem encotrou e quem perdeu</p>
+  
+  <ion-title class="titulos">Como Funciona!</ion-title>
+  <p class="textos"><span class="spanNumeros">1.</span> Cadastro Simples: Ao se cadastrar em nosso app, você receberá um QR Code exclusivo.</p>
+  <p class="textos"><span class="spanNumeros">2.</span> Página Pessoal: Esse QR Code direciona para uma página personalizada, onde o visitante encontrará os meios de contato que você escolher (telefone, WhatsApp, redes sociais ou e-mail).</p>
+  <p class="textos"><span class="spanNumeros">3.</span> Fácil de Usar: Coloque o seu QR Code onde achar mais importante, seja em etiquetas de bagagens, coleiras de pets, chaves, celulares, etc.</p>
+
+  <p class="pComDestaque">Tamanhos Personalizados!</p>
+
+  <ion-img id="imgQr" src="assets/imagens/QR.png"></ion-img>
+
+  <ion-title class="titulos">Vantagens:</ion-title>   
+ 
+  <ul id="lista">
+    <li class="itemLista">Praticidade: <span class="spanLista">Uma única página com todas as suas informações de contato.</span></li>
+    <li class="itemLista">Segurança: <span class="spanLista">Você escolhe como quer ser contatado, mantendo o controle sobre suas informações.</span></li>
+    <li class="itemLista">Eficiência:<span class="spanLista"> Aumenta as chances de recuperação rápida de seus objetos ou pets perdidos.</span></li>
+  </ul>
+
+
+  <p class="pComDestaque">Experimente agora!</p>
+
+  <div id="divButton">
+    <ion-button id="buttonCadastro" >Cadastre-se!</ion-button>
+  </div>
+
+  <ion-footer>
+    <p id="pFooter">Devolva-me <sup>&reg;</sup></p>
+  </ion-footer>
 
 
 </ion-content>
