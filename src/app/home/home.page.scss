@@ -25,7 +25,7 @@
   font-family: "Shadows Into Light", cursive;
   font-weight: 600;
   font-style: normal;
-  color: #612A85;
+  color: var(--text-color);
 
 }
 
@@ -35,7 +35,7 @@
 }
 
 .spanNumeros{
-  color: #612A85;
+  color: var(--text-color);
   font-family: Arial, Helvetica, sans-serif, cursive;
   font-weight: 600;
   font-style: italic;
@@ -55,11 +55,13 @@
   width: 50%;
   margin: 0px auto 15px auto;
 }
+
 ul{
   list-style-type: square;
 }
+
 li{
-  color: #612A85;
+  color: var(--text-color);
   font-size: 18px;
   font-weight: bold;
   font-style: italic;
@@ -71,14 +73,9 @@ li{
   font-style: normal;
 }
 
-
 #divButton{
   width: 100%;
   text-align: center;
-}
-
-#buttonCadastro{
-  --background: #612A85;
 }
 
 #pFooter{

@@ -1,39 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
-
-#divHeaderBotoes{
+#divConteudo{
+  margin: 0;
+  padding: 0;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: center;
+  align-items: center;
+  background-color: #612a85;
 }
 
 #logo{
-  width: 100px;
+  width: 60%;
+  margin-bottom: 15px;
   margin-left: 15px;
 }
-
-.buttonHeader{
-  --background: #612a85;
-  margin-top: 20px;
-  margin-right: 5px;
-  font-family: "Shadows Into Light", cursive;
-  font-weight: 600;
-  font-size: 12px;
+.login-container{
+  width: 80%;
+  max-width: 400px;
+  padding: 5px 20px 20px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form{
+  width: 100%;
 }
 
-#divButton{
-    width: 100%;
-    text-align: center;
-  }
-  
-  #buttonCadastro{
-    --background: #612A85;
-  }
-  
-  #pFooter{
-    text-align: center;
-    margin-bottom: 0px;
-    font-size: 12px;
-    font-style: italic;
-   }
-  
+.buttons{
+  //o primeiro está recebendo a classe de cor de button global
+  //essa classe referese somente ao botao do google
+  width: 100%;
+  text-indent: 42px;
+}
+.buttons img{
+  width: 30px;
+  margin-left: 12px;
+}
+.inputLogin{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+

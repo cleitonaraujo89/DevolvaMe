@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar id="tollbarHeader">
     <div id="divHeaderBotoes">
       <ion-img id="logo" src="assets/logo.png" routerLink="/home"></ion-img>
@@ -9,31 +9,33 @@
       </div>
     </div>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="false">
  <!--  <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">cadastro</ion-title>
     </ion-toolbar>
   </ion-header> -->
-
-  <ion-title size="large">Login</ion-title>
-
-  <form (submit)="login()">
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
-    </ion-item>
-    <ion-button expand="full" type="submit">Login</ion-button>
-  </form>
-  <ion-button expand="full" (click)="loginWithGoogle()">Login with Google</ion-button>
-  <ion-footer>
-    <p id="pFooter">Devolva-me <sup>&reg;</sup></p>
-  </ion-footer>
+  <div id="divConteudo">
+    
+    <div class="login-container">
+      <ion-img id="logo" src="assets/logo.png" routerLink="/home"></ion-img>
+      <form (submit)="login()" >
+        
+          
+          <ion-input type="email" [(ngModel)]="email" name="email" id="email" class="inputLogin" placeholder="E-mail"></ion-input>
+        
+      
+          
+          <ion-input type="password" [(ngModel)]="password" name="password" class="inputLogin" placeholder="Senha"></ion-input>
+      
+        <ion-button expand="full" type="submit" shape="round" class="globalButtonCor">Login</ion-button>
+      </form>
+      <ion-button expand="full" (click)="loginWithGoogle()" shape="round" class=" buttons">Login <img src="../../assets/imagens/googleP.png" alt="logo google"></ion-button>
+   
+      
+    </div>
+  </div>
 
 </ion-content>
