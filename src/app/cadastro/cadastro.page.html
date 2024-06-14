@@ -32,13 +32,18 @@
 
         <ion-input type="password"  name="confirmaPassword" [(ngModel)]="confirmaPassword" placeholder="Confirme a Senha"></ion-input>
 
-        <ion-input type="text" name="cep" id="cep" [(ngModel)]="cep" placeholder="Cep"></ion-input>
+        <ion-item [class.invalid]="cep.length !== 9" id="boxCep">
+          <ion-input type="text" name="cep" id="cep" [(ngModel)]="cep" (ngModelChange)="formatCep($event)" maxlength="9" placeholder="Cep"></ion-input>
+        </ion-item>
 
         <ion-input type="text" name="rua" id="rua" [(ngModel)]="rua" placeholder="Rua"></ion-input>
 
-        <ion-input type="text" name="bairro" id="bairro" [(ngModel)]="bairro" placeholder="Bairro"></ion-input>
+        <div class="divForm">
+          <ion-input type="text" name="numero" id="numero" [(ngModel)]="rua" placeholder="Número"></ion-input>
+          <ion-input type="text" name="bairro" id="bairro" [(ngModel)]="bairro" placeholder="Bairro"></ion-input>
+        </div>
 
-        <div id="divForm">
+        <div class="divForm">
           <ion-input type="text" name="cidade" id="cidade" [(ngModel)]="cidade" placeholder="Cidade"></ion-input>
 
           <ion-input type="text" name="uf" id="uf" [(ngModel)]="uf" placeholder="UF"></ion-input>

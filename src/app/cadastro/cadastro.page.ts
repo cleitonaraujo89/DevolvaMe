@@ -19,6 +19,7 @@ export class CadastroPage {
   confirmaPassword: string='';
   cep: string='';
   rua: string='';
+  numero: string='';
   bairro: string='';
   cidade: string='';
   uf: string='';
@@ -30,10 +31,25 @@ export class CadastroPage {
         message: 'A Senha digitada tem menos de 6 dígitos ou difere da confirmação.',
         buttons: ['OK']
       })
-
       await senhaDif.present();
     }
   }
 
+  formatCep(event: any) {
+    let value = event.replace(/\D/g, ''); // Remove qualquer caractere não numérico
+    if (value.length > 8) {
+      value = value.slice(0, 8); // Limita o valor a 8 dígitos
+    }
+    if (value.length > 5) {
+      value = value.slice(0, 5) + '-' + value.slice(5); // Adiciona o hífen
+    }
+    this.cep = value; // Atualiza o valor do CEP
+    console.log(this.cep)
+  }
 
+  getCepNumbers() {
+    return this.cep.replace(/\D/g, ''); // Remove o hífen e retorna apenas os números
+  }
 }
+
+

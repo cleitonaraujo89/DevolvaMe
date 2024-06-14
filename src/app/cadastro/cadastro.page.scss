@@ -90,8 +90,26 @@
     color: var(--text-color);
   }
   
-  #divForm{
+  .divForm{
     display: flex;
+  }
+  #boxCep{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+
+  .invalid {
+    border: 1px solid red;
+  }
+  #cep{
+    margin: 0px;
+  }
+  #bairro{
+    width: 70%;
+  }
+  #numero{
+    width: 30%;
   }
   #cidade{
     width: 75%;
