@@ -11,15 +11,49 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">cadastro</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-title size="large">cadastro</ion-title>
+<ion-content [fullscreen]="false">
+  <!--  <ion-header collapse="condense">
+     <ion-toolbar>
+       <ion-title size="large">cadastro</ion-title>
+     </ion-toolbar>
+   </ion-header> -->
+  <div id="divConteudo">
+     
+    <div class="login-container">
+      <ion-title id="textoCadastro">Cadastro</ion-title>
+
+      <form >
+         
+        <ion-input type="text" name="nome" id="nome" [(ngModel)]="nome" placeholder="Nome"></ion-input>
+
+        <ion-input type="email" name="email" id="email" [(ngModel)]="email" placeholder="E-mail"></ion-input>     
+          
+        <ion-input type="password"  name="password" [(ngModel)]="password" placeholder="Senha"></ion-input>
+
+        <ion-input type="password"  name="confirmaPassword" [(ngModel)]="confirmaPassword" placeholder="Confirme a Senha"></ion-input>
+
+        <ion-input type="text" name="cep" id="cep" [(ngModel)]="cep" placeholder="Cep"></ion-input>
+
+        <ion-input type="text" name="rua" id="rua" [(ngModel)]="rua" placeholder="Rua"></ion-input>
+
+        <ion-input type="text" name="bairro" id="bairro" [(ngModel)]="bairro" placeholder="Bairro"></ion-input>
+
+        <div id="divForm">
+          <ion-input type="text" name="cidade" id="cidade" [(ngModel)]="cidade" placeholder="Cidade"></ion-input>
+
+          <ion-input type="text" name="uf" id="uf" [(ngModel)]="uf" placeholder="UF"></ion-input>
+         
+        </div>
+      
+        <ion-button expand="full" type="submit" shape="round" class="globalButtonCor">Cadastrar</ion-button>
+      </form>
+      
+      
+       
+    </div>
+  </div>
   <ion-footer>
     <p id="pFooter">Devolva-me <sup>&reg;</sup></p>
   </ion-footer>
-
 </ion-content>
+

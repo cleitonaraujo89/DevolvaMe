@@ -11,11 +11,11 @@ import 'firebase/compat/auth';
 })
 export class LoginPage {
 
-  email: string='';
-  password: string='';
-
   constructor(private authService: AuthService, private router: Router, private alertController: AlertController ) {}
 
+  email: string='';
+  password: string='';
+  
   async login() {
     try {
       await this.authService.signInWithEmail(this.email, this.password);
