@@ -22,111 +22,111 @@
 }
 
 #divButton{
-    width: 100%;
-    text-align: center;
-  }
+  width: 100%;
+  text-align: center;
+}
   
-  #buttonCadastro{
-    --background: #612A85;
-  }
+#buttonCadastro{
+  --background: #612A85;
+}
 
-  #divConteudo{
-    margin: 0;
-    padding: 0;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #612a85;
-    border-radius: 0px 0px 20px 20px;
-  }
-  
-  #textoCadastro{
-    color: var(--text-color);
-    font-family: "Shadows Into Light", cursive;
-    font-weight: 800;
-    font-size: 25px;
-    /* padding-bottom: 30px; */
-    margin-bottom: 15px;
+#divConteudo{
+  margin: 0;
+  padding: 0;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #612a85;
+  border-radius: 0px 0px 20px 20px;
+}
 
-  }
-  .login-container{
-    width: 80%;
-    max-width: 400px;
-    padding: 5px 20px 20px 20px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
-  }
-  form{
-    width: 100%;
-  }
-  
-  .buttons{
-    //o primeiro está recebendo a classe de cor de button global
-    //essa classe referese somente ao botao do google
-    width: 100%;
-    text-indent: 42px;
-  }
-  .buttons img{
-    width: 30px;
-    margin-left: 12px;
-  }
-  form ion-input{
-    width: 100%;
-    height: 40px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-    font-style: italic;
-    color: var(--text-color);
-  }
-  
-  .divForm{
-    display: flex;
-  }
-  #boxCep{
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-  }
+#textoCadastro{
+  color: var(--text-color);
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 800;
+  font-size: 25px;
+  /* padding-bottom: 30px; */
+  margin-bottom: 15px;
 
-  .invalid {
-    border: 1px solid red;
-    border-radius: 5px;
-  }
-  #cep{
-    margin: 0px;
-  }
-  #bairro{
-    width: 70%;
-  }
-  #numero{
-    width: 30%;
-  }
-  #cidade{
-    width: 75%;
-  }
-  #uf{
-    width: 25%;
-  }
-  
-  #pFooter{
-    text-align: center;
-    height: 25px;
-    padding-top: 5px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    font-size: 12px;
-    font-style: italic;
-    background-color: white;
-   }
+}
+.login-container{
+  width: 80%;
+  max-width: 400px;
+  padding: 5px 20px 20px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+form{
+  width: 100%;
+}
+
+.buttons{
+  //o primeiro está recebendo a classe de cor de button global
+  //essa classe referese somente ao botao do google
+  width: 100%;
+  text-indent: 42px;
+}
+.buttons img{
+  width: 30px;
+  margin-left: 12px;
+}
+form ion-input{
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+.divForm{
+  display: flex;
+}
+
+#boxCep{
+  margin-bottom: 10px;
+}
+
+.invalid {
+  border: 1px solid red;
+  border-radius: 5px;
+}
+#cep{
+  margin: 0px;
+}
+#bairro{
+  width: 70%;
+}
+#numero{
+  width: 30%;
+}
+#cidade{
+  width: 75%;
+}
+#uf{
+  width: 25%;
+}
+
+#pFooter{
+  text-align: center;
+  height: 25px;
+  padding-top: 5px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 12px;
+  font-style: italic;
+  background-color: white;
+}
   
