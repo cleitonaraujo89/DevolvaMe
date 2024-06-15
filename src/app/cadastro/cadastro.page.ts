@@ -33,6 +33,15 @@ export class CadastroPage {
       })
       await senhaDif.present();
     }
+
+    if (this.cep.length != 8 || this.nome.length < 6 || this.email.length < 6 || this.rua.length < 2 || this.bairro.length < 2 || this.cidade.length < 4 || this.uf.length < 2 ){
+      const dados = await this.alertController.create({
+        header: 'Dados inválidos',
+        message: 'Cheque novamente os dados digitados',
+        buttons: ['OK']
+      })
+      await dados.present();
+    }
   }
 
   formatCep(event: any) {

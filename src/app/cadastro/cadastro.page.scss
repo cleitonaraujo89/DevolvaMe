@@ -33,7 +33,7 @@
   #divConteudo{
     margin: 0;
     padding: 0;
-    height: 120vh;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,6 +101,7 @@
 
   .invalid {
     border: 1px solid red;
+    border-radius: 5px;
   }
   #cep{
     margin: 0px;
@@ -120,7 +121,10 @@
   
   #pFooter{
     text-align: center;
+    height: 25px;
+    padding-top: 5px;
     margin-bottom: 0px;
+    margin-top: 0px;
     font-size: 12px;
     font-style: italic;
     background-color: white;

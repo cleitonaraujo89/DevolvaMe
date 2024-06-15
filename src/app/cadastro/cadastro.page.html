@@ -32,9 +32,9 @@
 
         <ion-input type="password"  name="confirmaPassword" [(ngModel)]="confirmaPassword" placeholder="Confirme a Senha"></ion-input>
 
-        <ion-item [class.invalid]="cep.length !== 9" id="boxCep">
+        <div [class.invalid]="cep.length !== 9 && cep.length > 0" id="boxCep">
           <ion-input type="text" name="cep" id="cep" [(ngModel)]="cep" (ngModelChange)="formatCep($event)" maxlength="9" placeholder="Cep"></ion-input>
-        </ion-item>
+        </div>
 
         <ion-input type="text" name="rua" id="rua" [(ngModel)]="rua" placeholder="Rua"></ion-input>
 
