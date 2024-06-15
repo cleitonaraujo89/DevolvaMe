@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar id="tollbarHeader">
     <div id="divHeaderBotoes">
       <ion-img id="logo" src="assets/logo.png" routerLink="/home"></ion-img>
@@ -9,46 +9,25 @@
       </div>
     </div>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content [fullscreen]="true">
-  <!-- <ion-header collapse="condense">
-    <ion-toolbar>
-    </ion-toolbar>
-  </ion-header> -->
-  <ion-img id="imgInicio" src="assets/imagens/devolva_me.png"></ion-img>
-  
-  <ion-title class="titulos">O que é o Devolva-me?</ion-title>
-    
-  <p class="textos">Devolva-me tem como objetivo auxiliar a devolução de itens perdidos aos seus respectivos donos de um modo simples, facilitando o contato entre quem encotrou e quem perdeu</p>
-  
-  <ion-title class="titulos">Como Funciona!</ion-title>
-  <p class="textos"><span class="spanNumeros">1.</span> Cadastro Simples: Ao se cadastrar em nosso app, você receberá um QR Code exclusivo.</p>
-  <p class="textos"><span class="spanNumeros">2.</span> Página Pessoal: Esse QR Code direciona para uma página personalizada, onde o visitante encontrará os meios de contato que você escolher (telefone, WhatsApp, redes sociais ou e-mail).</p>
-  <p class="textos"><span class="spanNumeros">3.</span> Fácil de Usar: Coloque o seu QR Code onde achar mais importante, seja em etiquetas de bagagens, coleiras de pets, chaves, celulares, etc.</p>
+<ion-content [fullscreen]="false">
+  <!--  <ion-header collapse="condense">
+     <ion-toolbar>
+       <ion-title size="large">cadastro</ion-title>
+     </ion-toolbar>
+   </ion-header> -->
+   <div id="divConteudo">
+     
+     <div class="home-container">
+       <ion-img id="logo" src="assets/logo.png" routerLink="/home"></ion-img>
+        <ion-button class="globalButtonCor" routerLink="/cadastro">Cadastre-se</ion-button>
+        <ion-button class="globalButtonCor" routerLink="/login">Entrar</ion-button>
 
-  <p class="pComDestaque">Tamanhos Personalizados!</p>
-
-  <ion-img id="imgQr" src="assets/imagens/QR.png"></ion-img>
-
-  <ion-title class="titulos">Vantagens:</ion-title>   
+        <div class="saibamais">
+          <ion-button fill="clear" routerLink="/info" size="small">Saiba Mais</ion-button>
+        </div>
+     </div>
+   </div>
  
-  <ul id="lista">
-    <li class="itemLista">Praticidade: <span class="spanLista">Uma única página com todas as suas informações de contato.</span></li>
-    <li class="itemLista">Segurança: <span class="spanLista">Você escolhe como quer ser contatado, mantendo o controle sobre suas informações.</span></li>
-    <li class="itemLista">Eficiência:<span class="spanLista"> Aumenta as chances de recuperação rápida de seus objetos ou pets perdidos.</span></li>
-  </ul>
-
-
-  <p class="pComDestaque">Experimente agora!</p>
-
-  <div id="divButton">
-    <ion-button class="globalButtonCor" routerLink="/cadastro">Cadastre-se!</ion-button>
-  </div>
-
-  <ion-footer>
-    <p id="pFooter">Devolva-me <sup>&reg;</sup></p>
-  </ion-footer>
-
-
-</ion-content>
+ </ion-content>
