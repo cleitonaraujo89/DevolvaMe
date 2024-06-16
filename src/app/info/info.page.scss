@@ -4,7 +4,6 @@
 #divHeaderBotoes{
   display: flex;
   justify-content: space-between;
-  
 }
 
 #logo{
@@ -26,12 +25,12 @@
   font-weight: 600;
   font-style: normal;
   color: var(--text-color);
-
 }
 
 .textos{
-  text-indent: 15px;
+  text-align: justify;
   margin: 5px 20px;
+  margin-bottom:20px;
 }
 
 .spanNumeros{
@@ -65,6 +64,7 @@ li{
   font-size: 18px;
   font-weight: bold;
   font-style: italic;
+  margin-bottom:20px;
 }
 .spanLista{
   color: black;

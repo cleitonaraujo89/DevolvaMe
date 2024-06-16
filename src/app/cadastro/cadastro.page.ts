@@ -60,5 +60,3 @@ export class CadastroPage {
     return this.cep.replace(/\D/g, ''); // Remove o hífen e retorna apenas os números
   }
 }
-
-
