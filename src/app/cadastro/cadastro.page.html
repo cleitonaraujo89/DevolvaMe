@@ -22,9 +22,9 @@
     <div class="login-container">
       <ion-title id="textoCadastro">Cadastro</ion-title>
 
-      <form >
+      <form (submit)="checar()">
          
-        <ion-input type="text" name="nome" id="nome" [(ngModel)]="nome" placeholder="Nome"></ion-input>
+        <ion-input type="text" name="nome" id="nome" [(ngModel)]="nome" placeholder="Nome" (input)="formatNome($event)"></ion-input>
 
         <ion-input type="email" name="email" id="email" [(ngModel)]="email" placeholder="E-mail"></ion-input>     
           
@@ -32,14 +32,14 @@
 
         <ion-input type="password"  name="confirmaPassword" [(ngModel)]="confirmaPassword" placeholder="Confirme a Senha"></ion-input>
 
-        <div [class.invalid]="cep.length !== 9 && cep.length > 0" id="boxCep">
-          <ion-input type="text" name="cep" id="cep" [(ngModel)]="cep" (ngModelChange)="formatCep($event)" maxlength="9" placeholder="Cep"></ion-input>
+        <div [class.invalid]="cepDigitado.length !== 9 && cepDigitado.length > 0" id="boxCep">
+          <ion-input type="text" name="cep" id="cep" [(ngModel)]="cepDigitado" (input)="formatCep($event)" maxlength="9" placeholder="Cep"></ion-input>
         </div>
 
         <ion-input type="text" name="rua" id="rua" [(ngModel)]="rua" placeholder="Rua"></ion-input>
 
         <div class="divForm">
-          <ion-input type="text" name="numero" id="numero" [(ngModel)]="rua" placeholder="Número"></ion-input>
+          <ion-input type="text" name="numero" id="numero" [(ngModel)]="numero" placeholder="Número"></ion-input>
           <ion-input type="text" name="bairro" id="bairro" [(ngModel)]="bairro" placeholder="Bairro"></ion-input>
         </div>
 
