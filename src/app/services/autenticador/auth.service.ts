@@ -20,6 +20,16 @@ export class AuthService {
     return await this.afAuth.signInWithPopup(provider);
   }
 
+  async register(email: string, password: string): Promise<firebase.auth.UserCredential> {
+    try {
+      const userCredential = await this.afAuth.createUserWithEmailAndPassword(email, password);
+      return userCredential;
+    } catch (error) {
+      console.error('Error registering user:', error);
+      throw error;
+    }
+  }
+  
   async signOut() {
     return await this.afAuth.signOut();
   }
