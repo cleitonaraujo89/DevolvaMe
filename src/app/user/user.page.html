@@ -6,9 +6,16 @@
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      
+    <ion-toolbar> 
     </ion-toolbar>
   </ion-header>
-  <ion-title size="large">user</ion-title>
+  <!-- <ion-img [src]="backgroundImage"></ion-img> -->
+
+  <!-- https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=netflix.com.br -->
+  <!-- https://goqr.me/api/doc/create-qr-code/ -->
+
+  <canvas id='qrCanvas'></canvas>
+
+  <!-- <ion-img [src]="qrCodeImage"></ion-img> -->
+  <ion-button (click)="generateQRCode()">aqui</ion-button>
 </ion-content>
