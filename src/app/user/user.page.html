@@ -9,12 +9,42 @@
     <ion-toolbar>
     </ion-toolbar>
   </ion-header>
-  <ion-title size="large">user</ion-title>
+  <ion-title size="large"></ion-title>
   <div class="usuario">
     <ion-thumbnail>
-      <img alt="foto" src="assets/imagens/walter.jpeg" />
+      <ion-img alt="foto" src="assets/imagens/pingo.jpg" />
     </ion-thumbnail>
-    <p class="textos">Contatos:</p> 
-    <ion-icon name="call-outline"></ion-icon>
+
+    <p class="titulos">Contatos:</p>
+
+    <div class="contato">
+      <ion-icon name="call"></ion-icon><br> <!-- n consegui adicionar o texto ao lado do icone a princípio -->
+    </div>
+
+    <div class="contato">
+      <ion-icon name="call-outline"></ion-icon><br>
+    </div>
+
+    <div class="contato">
+      <ion-icon id="whatsapp-icon" name="logo-whatsapp"></ion-icon><br>
+    </div>
+
+    <div class="contato">
+      <ion-icon id="email-icon" name="mail-outline"></ion-icon><br>
+    </div>
+
+    <div class="contato">
+      <div class="insta-container">
+        <ion-icon id="insta-icon" name="logo-instagram"></ion-icon><br>
+      </div>
+    </div>
+    <br>
+    <ion-textarea class="descricao" label="Descrição de itens"
+    labelPlacement="floating"
+    [autoGrow]="true"
+    fill="outline"
+    [counter]="true"
+    maxlength="500"
+    ></ion-textarea>
   </div>
 </ion-content>
