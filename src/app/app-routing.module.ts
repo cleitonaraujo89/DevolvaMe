@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'erro',
     loadChildren: () => import('./erro/erro.module').then( m => m.ErroPageModule)
   },
+  {
+    path: 'info',
+    loadChildren: () => import('./info/info.module').then( m => m.InfoPageModule)
+  },
 ];
 
 @NgModule({

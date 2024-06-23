@@ -1,21 +1,50 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>user</ion-title>
+    <h3 id='bemvindo'>Bem-vindo, (Nome ou e-mail do usuário)!</h3>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar> 
+    <ion-toolbar>
     </ion-toolbar>
   </ion-header>
-  <!-- <ion-img [src]="backgroundImage"></ion-img> -->
+  <ion-title size="large"></ion-title>
+  <div class="usuario">
+    <ion-thumbnail>
+      <ion-img alt="foto" src="assets/imagens/pingo.jpg" />
+    </ion-thumbnail>
 
-  <!-- https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=netflix.com.br -->
-  <!-- https://goqr.me/api/doc/create-qr-code/ -->
+    <p class="titulos">Contatos:</p>
 
-  <canvas id='qrCanvas'></canvas>
+    <div class="contato">
+      <ion-icon name="call"></ion-icon><br> <!-- n consegui adicionar o texto ao lado do icone a princípio -->
+    </div>
 
-  <!-- <ion-img [src]="qrCodeImage"></ion-img> -->
-  <ion-button (click)="generateQRCode()">aqui</ion-button>
+    <div class="contato">
+      <ion-icon name="call-outline"></ion-icon><br>
+    </div>
+
+    <div class="contato">
+      <ion-icon id="whatsapp-icon" name="logo-whatsapp"></ion-icon><br>
+    </div>
+
+    <div class="contato">
+      <ion-icon id="email-icon" name="mail-outline"></ion-icon><br>
+    </div>
+
+    <div class="contato">
+      <div class="insta-container">
+        <ion-icon id="insta-icon" name="logo-instagram"></ion-icon><br> <!-- icone do ionic framework customizado no scss -->
+      </div>
+    </div>
+    <br>
+    <ion-textarea class="descricao" label="Descrição de itens"
+    labelPlacement="floating"
+    [autoGrow]="true"
+    fill="outline"
+    [counter]="true"
+    maxlength="500"
+    ></ion-textarea> <!-- por enquanto não está mantendo os dados escritos -->
+  </div>
 </ion-content>

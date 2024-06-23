@@ -28,7 +28,7 @@
 }
 
 .textos{
-  text-align: center;
+  text-align: left;
   margin: 5px 15px;
   margin-bottom: 20px;
 }
@@ -86,65 +86,3 @@ li{
  }
 
 
-ion-thumbnail {
-  width: 50%;
-  margin: 0px auto 15px auto;
-  --size: 100%;
-  --border-radius: 50%;
-  margin-top: 10px;
-}
-
-ion-icon {
-  width: 45%;
-  margin: 0px auto 20px auto;
-  align-self: left;
-  font-size: 30px;
-  color: blue;
-}
-
-#whatsapp-icon{
-  color: #25D366;
-}
-
-#email-icon{
-  color: #ff4343;
-}
-
-#bemvindo {
-  font-size: large;
-  text-align: center;
-}
-
-.insta-container {
-  display: inline-block;
-  position: relative;
-  width: 45%;
-
-  #insta-icon {
-    width: 100%;
-    height: 100%;
-    font-size: 30px;
-    --ionicon-stroke-width: 1px;
-    color: transparent;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-    mask: url('https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/svg/logo-instagram.svg') no-repeat center / contain;
-  }
-}
-
-.descricao {
-  position: relative;
-  margin: 10px auto 20px auto;
-  width: 80%;
-  --border-radius: 5px;
-  --highlight-color-focused: #8235b6;
-  --padding-bottom: 10px;
-}
