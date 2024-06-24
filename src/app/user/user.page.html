@@ -11,40 +11,56 @@
   </ion-header>
   <ion-title size="large"></ion-title>
   <div class="usuario">
+    <ion-icon name="warning" id="iconP"></ion-icon>
+    <p id="pInicio">Todas as informações abaixo serão mostradas quando escanearem seu QR-Code</p>
     <ion-thumbnail>
-      <ion-img alt="foto" src="assets/imagens/pingo.jpg" />
+      <ion-img alt="foto" id="fotoUser" [src]="selectedImage" />
     </ion-thumbnail>
+
+    <div class="button-container ">
+      <ion-button (click)="triggerFileInput()" id="btnImg" class="globalButtonCor">Escolher Imagem</ion-button>
+      <input type="file" id="fileInput" (change)="onFileSelected($event)" accept="image/jpeg" class="hidden " />
+    </div>
 
     <p class="titulos">Contatos:</p>
 
-    <div class="contato">
-      <ion-icon name="call"></ion-icon><br> <!-- n consegui adicionar o texto ao lado do icone a princípio -->
-    </div>
-
-    <div class="contato">
-      <ion-icon name="call-outline"></ion-icon><br>
-    </div>
-
-    <div class="contato">
-      <ion-icon id="whatsapp-icon" name="logo-whatsapp"></ion-icon><br>
-    </div>
-
-    <div class="contato">
-      <ion-icon id="email-icon" name="mail-outline"></ion-icon><br>
-    </div>
-
-    <div class="contato">
-      <div class="insta-container">
-        <ion-icon id="insta-icon" name="logo-instagram"></ion-icon><br> <!-- icone do ionic framework customizado no scss -->
+    <form action="">
+      <div class="contato">
+        <ion-icon name="call"></ion-icon>
+        <ion-input type="text" name="tel1" id="tel1" [(ngModel)]="tel1" placeholder="Telefone Principal"></ion-input>
       </div>
-    </div>
-    <br>
-    <ion-textarea class="descricao" label="Descrição de itens"
-    labelPlacement="floating"
-    [autoGrow]="true"
-    fill="outline"
-    [counter]="true"
-    maxlength="500"
-    ></ion-textarea> <!-- por enquanto não está mantendo os dados escritos -->
+      <div class="contato">
+        <ion-icon name="call-outline"></ion-icon>
+        <ion-input type="text" name="tel2" id="tel2" [(ngModel)]="tel2" placeholder="Telefone Secundário"></ion-input>
+      
+      </div>
+      <div class="contato">
+        <ion-icon id="whatsapp-icon" name="logo-whatsapp"></ion-icon>
+        <ion-input type="text" name="whats" id="whats" [(ngModel)]="whats" placeholder="WhatsApp"></ion-input>
+      </div>
+      <div class="contato">
+        <ion-icon id="email-icon" name="mail-outline"></ion-icon>
+        <ion-input type="text" name="email" id="email" [(ngModel)]="email" placeholder="E-mail"></ion-input>
+      </div>
+      <div class="contato">
+        <ion-icon id="insta-icon" name="logo-instagram"></ion-icon>
+        <ion-input type="text" name="insta" id="insta" [(ngModel)]="insta" placeholder="Instagram"></ion-input> 
+      </div>
+
+      <div class="contato">
+        <ion-icon id="face" name="logo-facebook"></ion-icon>
+        <ion-input type="text" name="face" id="face" [(ngModel)]="face" placeholder="Instagram"></ion-input> 
+      </div>
+      
+      <div class="textCenter">
+        <ion-checkbox (ionChange)="onCheckboxChange($event)">Concordo com os Termos de Serviço</ion-checkbox>
+      </div>
+
+      <div class="boxBtnSalvar">
+       
+        <ion-button  type="submit" shape="round" class="globalButtonCor">Salvar<ion-icon name="cloud-upload-outline"></ion-icon></ion-button>
+      </div>
+      
+    </form>
   </div>
 </ion-content>

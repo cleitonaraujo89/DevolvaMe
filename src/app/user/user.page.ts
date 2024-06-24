@@ -1,7 +1,4 @@
 import { Component} from '@angular/core';
-import * as qrcode from 'qrcode';
-import * as CanvasJS from 'canvasjs';
-
 
 @Component({
   selector: 'app-user',
@@ -10,9 +7,14 @@ import * as CanvasJS from 'canvasjs';
 })
 export class UserPage  {
 
-  backgroundImage: string = "assets/imagens/testebg.jpg";
-  centerImage: string = 'assets/imagens/googleP.png';
-  qrCodeImage: string = '';
+  selectedImage: string | ArrayBuffer | null = 'assets/imagens/pingo.jpg';
+  tel1: string= "";
+  tel2: string= "";
+  whats: string= "";
+  email: string ="";
+  insta: string= "";
+  face: string= "";
+  termos: boolean= false;
 
   constructor() { }
 
@@ -20,52 +22,26 @@ export class UserPage  {
     
   }
   
-
-  async generateQRCode() {
-    const qrCodeText = 'netflix.com.br';
-    const qrCodeBase64 = await this.generateQRCodeBase64(qrCodeText);
-
-    this.drawQRCode(qrCodeBase64);
+  triggerFileInput() {
+    const fileInput = document.getElementById('fileInput') as HTMLInputElement;
+    fileInput.click();
   }
+  
+  onFileSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
 
-  async generateQRCodeBase64(qrCodeText: string): Promise<string> {
-    const qrCode = await qrcode.toDataURL(qrCodeText);
-    return qrCode.replace('data:image/png;base64,', '');
-  }
-
-  async drawQRCode(qrCodeBase64: string) {
-    const canvas = document.getElementById('qrCanvas') as HTMLCanvasElement;
-    const ctx = canvas.getContext('2d');
-    console.log(ctx);
-
-    // Desenhe a imagem de fundo
-    const backgroundImage = new Image();
-    backgroundImage.onload = () => {
-      if (ctx) {
-        ctx.drawImage(backgroundImage, 0, 0);
-      } else {
-        console.error('Canvas context not found!');
-      }
-
-      // Desenhe o QR Code
-      const qrCodeImage = new Image();
-      qrCodeImage.onload = () => {
-        // Calcule a posição do QR Code no centro
-        const qrCodeSize = 100; // Tamanho desejado do QR Code
-        const x = (canvas.width - qrCodeSize) / 2;
-        const y = (canvas.height - qrCodeSize) / 2;
-
-        if (ctx) {
-          ctx.drawImage(qrCodeImage, x, y, qrCodeSize, qrCodeSize);
-        } else {
-          console.error('Canvas context not found!');
-        }
-        // Converta o canvas para base64
-        this.qrCodeImage = canvas.toDataURL();
+    if (input.files && input.files.length > 0) {
+      const file = input.files[0];
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.selectedImage = reader.result;
       };
-      qrCodeImage.src = `data:image/png;base64,${qrCodeBase64}`;
-    };
-    backgroundImage.src = this.backgroundImage;
+      reader.readAsDataURL(file);
+    }
+  }
+
+  onCheckboxChange(event: CustomEvent) {
+    this.termos = event.detail.checked;
   }
 }
 
