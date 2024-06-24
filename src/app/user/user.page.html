@@ -25,23 +25,32 @@
     <p class="titulos">Contatos:</p>
 
     <form action="">
+
+      <div class="contato">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-input type="text" name="nome" id="nome" [(ngModel)]="nome" placeholder="Nome"></ion-input>
+      </div>
+
       <div class="contato">
         <ion-icon name="call"></ion-icon>
         <ion-input type="text" name="tel1" id="tel1" [(ngModel)]="tel1" placeholder="Telefone Principal"></ion-input>
       </div>
+
       <div class="contato">
         <ion-icon name="call-outline"></ion-icon>
         <ion-input type="text" name="tel2" id="tel2" [(ngModel)]="tel2" placeholder="Telefone Secundário"></ion-input>
-      
       </div>
+
       <div class="contato">
         <ion-icon id="whatsapp-icon" name="logo-whatsapp"></ion-icon>
         <ion-input type="text" name="whats" id="whats" [(ngModel)]="whats" placeholder="WhatsApp"></ion-input>
       </div>
+
       <div class="contato">
         <ion-icon id="email-icon" name="mail-outline"></ion-icon>
         <ion-input type="text" name="email" id="email" [(ngModel)]="email" placeholder="E-mail"></ion-input>
       </div>
+
       <div class="contato">
         <ion-icon id="insta-icon" name="logo-instagram"></ion-icon>
         <ion-input type="text" name="insta" id="insta" [(ngModel)]="insta" placeholder="Instagram"></ion-input> 
@@ -57,7 +66,6 @@
       </div>
 
       <div class="boxBtnSalvar">
-       
         <ion-button  type="submit" shape="round" class="globalButtonCor">Salvar<ion-icon name="cloud-upload-outline"></ion-icon></ion-button>
       </div>
       

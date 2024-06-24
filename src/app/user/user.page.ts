@@ -8,6 +8,7 @@ import { Component} from '@angular/core';
 export class UserPage  {
 
   selectedImage: string | ArrayBuffer | null = 'assets/imagens/pingo.jpg';
+  nome: string ="";
   tel1: string= "";
   tel2: string= "";
   whats: string= "";
@@ -40,6 +41,11 @@ export class UserPage  {
     }
   }
 
+  formatNome(event: any) { //permite somente letras
+    let nome = event.target.value.replace(/[^a-zA-Z\s]/g, ''); 
+    this.nome = nome;
+  }
+  
   onCheckboxChange(event: CustomEvent) {
     this.termos = event.detail.checked;
   }
