@@ -17,7 +17,7 @@
       <ion-img alt="foto" id="fotoUser" [src]="selectedImage" />
     </ion-thumbnail>
 
-    <div class="button-container ">
+    <div class="button-container">
       <ion-button (click)="triggerFileInput()" id="btnImg" class="globalButtonCor">Escolher Imagem</ion-button>
       <input type="file" id="fileInput" (change)="onFileSelected($event)" accept="image/jpeg" class="hidden " />
     </div>
@@ -58,7 +58,7 @@
 
       <div class="contato">
         <ion-icon id="face" name="logo-facebook"></ion-icon>
-        <ion-input type="text" name="face" id="face" [(ngModel)]="face" placeholder="Instagram"></ion-input> 
+        <ion-input type="text" name="face" id="face" [(ngModel)]="face" placeholder="Facebook"></ion-input> 
       </div>
       
       <div class="textCenter">

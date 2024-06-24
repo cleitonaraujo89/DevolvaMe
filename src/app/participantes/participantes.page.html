@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar id="tollbarHeader">
+    <div id="divHeaderBotoes">
+      <ion-img id="logo" src="assets/logo.png" routerLink="/home"></ion-img>
+      <div>
+        <ion-button class="buttonHeader" size="small" routerLink="/login">Login &nbsp;
+          <ion-icon name="log-in-outline"></ion-icon></ion-button>
+        <ion-button class="buttonHeader" size="small" routerLink="/cadastro">Cadastro &nbsp;<ion-icon name="person-outline"></ion-icon></ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="participante-container">
+    <ion-title class="titulos">Conheça Nossa Equipe!</ion-title>
+    <div class="card">
+      <div class="imagem-membro">
+        <ion-thumbnail>
+          <ion-img alt="foto" src="assets/imagens/bruno.jpg"></ion-img>
+        </ion-thumbnail>
+      </div>
+      <div class="info-membro">
+        <u><h3>Bruno Cesar</h3></u>
+        <p>Desenvolvedor Front-End</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imagem-membro">
+        <ion-thumbnail>
+          <ion-img alt="foto" src="assets/imagens/cleiton.png"></ion-img>
+        </ion-thumbnail>
+      </div>
+      <div class="info-membro">
+        <u><h3>Cleiton Araujo</h3></u>
+        <p>Desenvolvedor Back-End e Gerente do Projeto</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imagem-membro">
+        <ion-thumbnail>
+          <ion-img alt="foto" src="assets/imagens/evelynn.jpg"></ion-img>
+        </ion-thumbnail>
+      </div>
+      <div class="info-membro">
+        <u><h3>Evelynn Mendes</h3></u>
+        <p>Designer de Interface</p>
+      </div>
+    </div>
+    <div id="divButton">
+      <ion-button class="globalButtonCor" id="voltar" routerLink="/info">
+        <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+        Voltar
+      </ion-button>
+    </div>
+  </div>
+
+  <ion-footer>
+    <p style="font-weight: bold" id="pFooter">Devolva-me <sup>&reg;</sup></p>
+  </ion-footer>
+</ion-content>
+
+
