@@ -6,14 +6,11 @@ import { User } from 'src/app/interfaces/user.model';
   providedIn: 'root'
 })
 export class DBfireService {
- /*  private dadosUsuario: AngularFirestoreCollectionGroup<DadosFireBase> */
-
-  constructor(private afs: AngularFirestore) { 
-    // this.dadosUsuario = this.afs.collection<DadosFireBase>('Usuarios');
-  }
+ 
+  constructor(private afs: AngularFirestore) {}
 
   createUser(user: User) {
-    return this.afs.collection('Usuarios').doc(user.id).set(user);
+    return this.afs.collection('Usuarios').doc(user.uid).set(user);
   }
 
   getUser(uid: string) {

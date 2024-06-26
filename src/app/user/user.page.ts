@@ -32,6 +32,8 @@ export class UserPage  {
     insta: "",
     face: "",
     termos: true,
+    uid: ""
+    
   };
 
   constructor(private alerta: AlertService) { }

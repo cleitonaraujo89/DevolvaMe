@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/autenticador/auth.service';
-import { AlertController } from '@ionic/angular'
 import { AlertService } from '../services/alertas/alert.service';
 import 'firebase/compat/auth';
 
@@ -12,7 +11,7 @@ import 'firebase/compat/auth';
 })
 export class LoginPage {
 
-  constructor(private authService: AuthService, private router: Router, private alertController: AlertController, private alert: AlertService) {}
+  constructor(private authService: AuthService, private router: Router, private alert: AlertService) {}
 
   email: string='';
   password: string='';
@@ -29,8 +28,8 @@ export class LoginPage {
 
   async loginWithGoogle() {
     try {
-      await this.authService.signInWithGoogle();
-      this.router.navigate(['/user']);
+      const uid = await this.authService.signInWithGoogle();
+      this.router.navigate(['/user', uid]);
     } catch (error) {
       
       this.alert.msgAlerta("Erro de login", "Usuário ou senha incorreta");

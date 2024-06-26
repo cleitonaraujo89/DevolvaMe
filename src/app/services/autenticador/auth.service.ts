@@ -19,7 +19,9 @@ export class AuthService {
 
   async signInWithGoogle() {
     const provider = new GoogleAuthProvider();
-    return await this.afAuth.signInWithPopup(provider);
+    const user = await this.afAuth.signInWithPopup(provider);
+    const uid = user.user?.uid;
+    return uid
   }
 
   async register(email: string, password: string): Promise<firebase.auth.UserCredential> {

@@ -7,6 +7,6 @@ export interface User {
     insta?: string;
     face?: string;
     termos?: boolean;
-    id?: string;
+    uid?: string;
 
 }
