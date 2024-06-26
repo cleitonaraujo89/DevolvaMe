@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/autenticador/auth.service';
-import { AlertController } from '@ionic/angular'
+import { AlertService } from '../services/alertas/alert.service';
 import { ViaCepService } from '../services/via_cep/via-cep.service';
 import 'firebase/compat/auth';
 
@@ -12,7 +12,7 @@ import 'firebase/compat/auth';
 })
 export class CadastroPage {
 
-  constructor(private authService: AuthService, private router: Router, private alertController: AlertController, private viaCepService: ViaCepService ) {}
+  constructor(private authService: AuthService, private router: Router, private alerta: AlertService, private viaCepService: ViaCepService ) {}
 
   nome: string='';
   email: string='';
@@ -30,19 +30,19 @@ export class CadastroPage {
   async checar(){ // CHECANDO AS SENHAS
     if (this.password !== this.confirmaPassword || this.password.length < 6){
 
-      this.erroAlerta('Senhas Inválidas', 'A Senha digitada tem menos de 6 dígitos ou difere da confirmação.');
+      this.alerta.msgAlerta('Senhas Inválidas', 'A Senha digitada tem menos de 6 dígitos ou difere da confirmação.');
       
       // CHECANDO OS OUTROS DADOS
     } else if (this.cepAPI.length != 8 || this.nome.length < 6 || this.email.length < 6 || this.rua.length < 2 || this.bairro.length < 2 || this.cidade.length < 4 || this.uf.length < 2 ||this.cepDigitado.replace('-', '') != this.cepAPI){ 
 
-      this.erroAlerta('Dados inválidos', 'Cheque novamente os dados digitados');
+      this.alerta.msgAlerta('Dados inválidos', 'Cheque novamente os dados digitados');
 
     } else{ // CASO TUDO CERTO EFETUA O REGISTRO
       try{
         this.authService.register(this.email,this.password);
         this.router.navigate(['/user']);
       } catch {
-        this.erroAlerta('Ops!', 'Algo deu errado, tente novamente');
+        this.alerta.msgAlerta('Ops!', 'Algo deu errado, tente novamente');
         this.router.navigate(['/home']);
       }
     
@@ -83,19 +83,9 @@ export class CadastroPage {
         this.cidade = this.dados.localidade;
         this.uf = this.dados.uf;
         if(this.dados.erro){ // caso não encontre o CEP
-          this.erroAlerta("Cep Inválido", "Cheque novamente o cep digitado");
+          this.alerta.msgAlerta("Cep Inválido", "Cheque novamente o cep digitado");
         }
       }
     );
   }
-
-  async erroAlerta(head: string, msg: string){ // alerta caso algo esteja errado
-    const algoErrado = await this.alertController.create({
-      header: head,
-      message: msg,
-      buttons: ['OK']
-    })
-    await algoErrado.present();
-  }
-
 }

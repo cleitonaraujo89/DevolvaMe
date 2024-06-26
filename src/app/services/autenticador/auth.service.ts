@@ -12,7 +12,9 @@ export class AuthService {
   constructor(private afAuth: AngularFireAuth) {}
 
   async signInWithEmail(email: string, password: string) {
-    return await this.afAuth.signInWithEmailAndPassword(email, password);
+    const user = await this.afAuth.signInWithEmailAndPassword(email, password);
+    const uid = user.user?.uid;
+    return uid
   }
 
   async signInWithGoogle() {
