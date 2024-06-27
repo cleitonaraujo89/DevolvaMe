@@ -40,14 +40,13 @@ export class CadastroPage {
     } else{ // CASO TUDO CERTO EFETUA O REGISTRO
       try{
         this.authService.register(this.email,this.password);
-        this.router.navigate(['/user']);
+        this.alerta.msgAlerta('Tudo certo!', 'Agora você já pode efetuar seu login');
+        this.router.navigate(['/login']);
       } catch {
         this.alerta.msgAlerta('Ops!', 'Algo deu errado, tente novamente');
         this.router.navigate(['/home']);
-      }
-    
-    }
-      
+      }    
+    }      
   }
 
   formatNome(event: any) { //permite somente letras
@@ -65,7 +64,7 @@ export class CadastroPage {
     }
 
     this.cepDigitado = value; // Atualiza o valor do CEP
-    console.log(this.cepDigitado);
+    /* console.log(this.cepDigitado); */
 
     if (this.cepDigitado.length === 9) { 
       this.cepAPI = this.cepDigitado.replace('-', ''); // Remove o traço

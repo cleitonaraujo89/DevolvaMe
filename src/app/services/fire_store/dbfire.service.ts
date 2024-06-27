@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore} from '@angular/fire/compat/firestore';
 import { User } from 'src/app/interfaces/user.model';
+import { Observable} from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,12 @@ export class DBfireService {
     return this.afs.collection('Usuarios').doc(user.uid).set(user);
   }
 
-  getUser(uid: string) {
-    return this.afs.collection('Usuarios').doc(uid).valueChanges();
+  getUser(uid: string): Observable<User | undefined>  {
+    return this.afs.collection('Usuarios').doc<User>(uid).valueChanges();
+  }
+
+  updateUser(uid: string, data: Partial<User>): Promise<void> {
+    return this.afs.collection('Usuarios').doc(uid).update(data);
+  
   }
 }

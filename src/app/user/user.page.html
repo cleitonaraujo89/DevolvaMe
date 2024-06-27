@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <h3 id='bemvindo'>Bem-vindo, (Nome ou e-mail do usuário)!</h3>
+    <div id="head">
+      <h3 id='bemvindo'>Olá, {{nomeHead}}</h3>
+      <ion-button (click)="logOut()" size="small" class="small">Sair</ion-button>
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -28,7 +31,7 @@
 
       <div class="contato">
         <ion-icon name="person-outline"></ion-icon>
-        <ion-input type="text" name="nome" id="nome" [(ngModel)]="nome" placeholder="Nome"></ion-input>
+        <ion-input type="text" name="nome" id="nome" [(ngModel)]="nome" placeholder="Nome" (input)="formatNome($event)"></ion-input>
       </div>
 
       <div class="contato">
