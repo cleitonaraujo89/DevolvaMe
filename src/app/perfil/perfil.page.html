@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title><h3 id='bemvindo'>Bem-vindo(a) à minha página!</h3></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="usuario">
+
+    <ion-thumbnail>
+      <ion-img alt="foto" id="fotoUser" src="assets/imagens/pingo.jpg" />
+    </ion-thumbnail>
+  </div>
+
+  <p class="titulos">Olá, sou [NOME]. Fico feliz que tenha encontrado meu item perdido!</p>
+  <p class="titulos">Por favor, entre em contato:</p>
+
+  <form>
+  <div class="contato">
+    <ion-icon name="call"></ion-icon>
+    <ion-input type="text" name="tel1" id="tel1" placeholder="Telefone Principal"></ion-input><ion-icon name="copy-outline" id="copiar"></ion-icon>
+  </div>
+
+  <div class="contato">
+    <ion-icon name="call-outline"></ion-icon>
+    <ion-input type="text" name="tel2" id="tel2" placeholder="Telefone Secundário"></ion-input><ion-icon name="copy-outline" id="copiar"></ion-icon>
+  </div>
+
+  <div class="contato">
+    <ion-icon id="whatsapp-icon" name="logo-whatsapp"></ion-icon>
+    <ion-input type="text" name="whats" id="whats" placeholder="WhatsApp"></ion-input><ion-icon name="copy-outline" id="copiar"></ion-icon>
+  </div>
+
+  <div class="contato">
+    <ion-icon id="email-icon" name="mail-outline"></ion-icon>
+    <ion-input type="text" name="email" id="email" placeholder="E-mail"></ion-input><ion-icon name="copy-outline" id="copiar"></ion-icon>
+  </div>
+
+  <div class="contato">
+    <ion-icon id="insta-icon" name="logo-instagram"></ion-icon>
+    <ion-input type="text" name="insta" id="insta" placeholder="Instagram"></ion-input><ion-icon name="copy-outline" id="copiar"></ion-icon> 
+  </div>
+
+  <div class="contato">
+    <ion-icon id="face" name="logo-facebook"></ion-icon>
+    <ion-input type="text" name="face" id="face" placeholder="Facebook"></ion-input><ion-icon name="copy-outline" id="copiar"></ion-icon>
+  </div>
+</form>
+</ion-content>

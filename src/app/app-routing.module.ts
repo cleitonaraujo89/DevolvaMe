@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'participantes',
     loadChildren: () => import('./participantes/participantes.module').then( m => m.ParticipantesPageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
 ];
 
 @NgModule({
