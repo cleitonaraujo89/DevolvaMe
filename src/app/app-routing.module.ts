@@ -36,7 +36,7 @@ const routes: Routes = [
     loadChildren: () => import('./participantes/participantes.module').then( m => m.ParticipantesPageModule)
   },
   {
-    path: 'perfil',
+    path: 'perfil/:uid',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
   },
 ];

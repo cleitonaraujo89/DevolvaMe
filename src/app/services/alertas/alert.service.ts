@@ -16,4 +16,20 @@ export class AlertService {
     })
     await algoErrado.present();
   }
+
+  async msgAlertaAtualiza(head: string, msg: string){ // alerta caso algo esteja errado
+    const algoErrado = await this.alerta.create({
+      header: head,
+      message: msg,
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            window.location.reload()
+          }
+        }
+      ]
+    })
+    await algoErrado.present();
+  }
 }

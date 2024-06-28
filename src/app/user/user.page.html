@@ -73,5 +73,11 @@
       </div>
       
     </form>
+
+    <div [ngClass]="{'hidden': novoUsuario}">
+      <p class="titulos">Seu QR-Code exclusivo </p>
+      <ion-img [src]="imgUrl" id="imgQR"></ion-img>      
+    </div> 
+       
   </div>
 </ion-content>

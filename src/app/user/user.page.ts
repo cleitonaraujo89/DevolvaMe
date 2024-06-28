@@ -27,6 +27,8 @@ export class UserPage  {
   termos: boolean= false;
   novoUsuario: boolean = false;
 
+  imgUrl: string="";
+
   userCad: User | undefined;
 
   user: User = {
@@ -73,6 +75,8 @@ export class UserPage  {
         this.email = this.userCad.email;
         this.insta = this.userCad.insta;
         this.face = this.userCad.face;
+        this.imgUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://localhost:8100/perfil/" + this.userId;
+        
       }
     });     
   }
@@ -118,6 +122,7 @@ export class UserPage  {
       this.user.email = this.email;
       this.user.insta = this.insta;
       this.user.face = this.face;
+     
 
       if(this.novoUsuario){        
         this.dbFire.createUser(this.user); // se for novo cadastra
@@ -126,7 +131,7 @@ export class UserPage  {
         this.dbFire.updateUser(this.userId, this.user)
       }
 
-      this.alerta.msgAlerta("Dados Salvos", "Tudo certo! Dados atualizados.")
+      this.alerta.msgAlertaAtualiza("Dados Salvos", "Tudo certo! Dados atualizados.")
     }
   }
 

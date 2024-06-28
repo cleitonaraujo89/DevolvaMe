@@ -1,24 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
-
-// #divHeaderBotoes{
-//   display: flex;
-//   justify-content: space-between;
-// }
-
-// #logo{
-//   width: 100px;
-//   margin-left: 15px;
-// }
-
-// .buttonHeader{
-//   --background: #612a85;
-//   margin-top: 20px;
-//   margin-right: 5px;
-//   font-weight: 600;
-//   font-size: 10px;
-// }
-
+#logo{
+  width: 150px;
+  margin: 30px auto;
+}
 .titulos{
   text-align: center;
   padding-top: 10px;
@@ -26,64 +11,6 @@
   font-style: normal;
   color: var(--text-color);
 }
-
-/* .textos{
-  text-align: center;
-  margin: 5px 15px;
-  margin-bottom: 20px;
-} */
-
-// .spanNumeros{
-//   color: var(--text-color);
-//   font-family: Arial, Helvetica, sans-serif, cursive;
-//   font-weight: 600;
-//   font-style: italic;
-//   font-size: 18px;
-// }
-
-// .pComDestaque{
-//   text-align: center;
-//   margin-bottom: 0px;
-//   font-family: "Shadows Into Light", cursive;
-//   font-weight: 400;
-//   font-size: 20px;
-//   font-style: italic;
-// }
-
-// #imgQr{
-//   width: 50%;
-//   margin: 0px auto 15px auto;
-// }
-
-// ul{
-//   list-style-type: square;
-// }
-
-// li{
-//   color: var(--text-color);
-//   font-size: 18px;
-//   font-weight: bold;
-//   font-style: italic;
-//   margin-bottom:20px;
-// }
-// .spanLista{
-//   color: black;
-//   font-size: 16px;
-//   font-weight: lighter;
-//   font-style: normal;
-// }
-
-// #divButton{
-//   width: 100%;
-//   text-align: center;
-// }
-
-// #pFooter{
-//   text-align: center;
-//   margin-bottom: 0px;
-//   font-size: 12px;
-//   font-style: italic;
-//  }
 
 #pInicio{
   font-size: 17px;
@@ -122,9 +49,7 @@ ion-thumbnail {
   // margin-top: 20px; // Opcional: ajuste conforme necessário
 }
 
-.hidden{
-  display: none;
-}
+
 
 ion-icon {
   // width: 45%;
@@ -145,6 +70,11 @@ ion-icon {
 
  
 }
+
+.hidden{
+  display: none;
+}
+
 #whatsapp-icon{
   color: #25D366;
 }
