@@ -110,7 +110,7 @@ export class UserPage  {
 
   checarInfo(){
     if (!this.termos){
-      this.alerta.msgAlerta("Termos de Uso", "Aceite os termos de uso")
+      this.alerta.msgAlertaAtualiza("Termos de Uso", "Aceite os termos de uso")
     } else if (this.nome.length <2 || (this.tel1.length == 0 && this.tel2.length ==0)){
       this.alerta.msgAlerta("Dados Inválidos", "Por favor verifique os dados informados")
     } else {
